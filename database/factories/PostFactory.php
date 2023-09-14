@@ -17,8 +17,10 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence,
+            'title' => ucwords($this->faker->words(4,true)),
              'excerpt' => $this->faker->sentence,
+             'description' => $this->faker->sentence(4, true),
+             'hash_tag' => $this->faker->words(2,true),
              'body' => $this->faker->paragraph(3),
         ];
     }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>CABEZA</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -27,8 +27,7 @@
 
      <x-model-area/>
 
-             <x-blog-post :posts="$posts"/>
-
+     <livewire:blog-post :posts="$posts" />
     <x-footer/>
 
     {{-- flowbite script --}}

@@ -4,10 +4,10 @@
     <img src="https://picsum.photos/300/300" alt="blog-post">
 </div>
 <div class="px-4 space-y-4 text-left">
-    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+    <h3 class="text-2xl font-bold leading-tight text-gray-900">
         {{ $post->title }}
     </h3>
-    <p class="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
+    <p class="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3 lg:line-clamp-none">
         {{ $post->excerpt }}
     </p>
     <a href="{{ route('post', $post) }}"

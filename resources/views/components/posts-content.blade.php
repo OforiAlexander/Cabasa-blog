@@ -4,11 +4,10 @@
             <div class="inline-flex items-center mr-3 text-sm text-white">
                 <div>
                     <p class="text-base font-light text-gray-50">
-                        The Ghana most strongest contestant king Blackk
+                        {{ $post->description }}
                     </p>
                     <p class="text-base font-light text-gray-50">
-                        <time pubdate datetime="2022-02-08" title="December 04, 2020 ">December 04, 2020
-                        </time>
+                        <time pubdate datetime="2022-02-08" title="December 04, 2020 ">{{ $post->created_at->diffForHumans() }}</time>
                     </p>
                 </div>
             </div>

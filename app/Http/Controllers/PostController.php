@@ -5,17 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Livewire\WithPagination;
 
 class PostController extends Controller
 {
+    use WithPagination;
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('welcome', [
-            'posts' => Post::get()
-        ]);
+        return view('welcome', ([
+            'posts' => Post::simplePaginate(6)
+        ]));
     }
 
     /**
