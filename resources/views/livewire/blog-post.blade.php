@@ -6,7 +6,7 @@
             </h2>
             <div class="grid grid-cols-1 mt-12 text-center place-content-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($posts as $post)
-                    <div class="space-y-4 text-left">
+                    <div wire:key='{{ $post->id }}' class="space-y-4 text-left">
                         <x-welcome-blog-content :post='$post' />
                     </div>
                 @endforeach

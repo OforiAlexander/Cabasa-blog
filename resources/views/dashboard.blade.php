@@ -1,8 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight inline-block">
             {{ __('Admin Dashboard') }}
         </h2>
+        
     </x-slot>
 
     <div class="py-12" x-data="{ open: $persist(true).using(sessionStorage)}">
@@ -20,7 +21,8 @@
                     </svg>
                 </div>
             </div>
-            <x-admin-dashboard/>
+            @include('livewire.includes.input')
+            <livewire:admin-dashboard :posts="$posts"/>
         </div>
     </div>
 </x-app-layout>
