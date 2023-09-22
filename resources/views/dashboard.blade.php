@@ -21,7 +21,7 @@
                     </svg>
                 </div>
             </div>
-            @include('livewire.includes.input')
+            
             <livewire:admin-dashboard :posts="$posts"/>
         </div>
     </div>

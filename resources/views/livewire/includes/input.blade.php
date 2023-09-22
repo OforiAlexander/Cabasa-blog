@@ -13,7 +13,7 @@
                               </svg>                              
                         </span>
                     </div>
-                    <input type="text"  wire:model.live.debounce.500ms='search'
+                    <input type="text"  wire:model.live='search'
                         class="flex-shrink flex-grow leading-normal w-px flex-1 border-0 h-10 rounded-md border-grey-light  rounded-l-none px-3 self-center relative  font-roboto text-base placeholder:text-sm outline-none"
                         placeholder="Search Post" />
                 </div>

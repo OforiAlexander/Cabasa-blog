@@ -6,6 +6,8 @@ use App\Models\Post;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+use function Laravel\Prompts\search;
+
 class PostList extends Component
 {
     use WithPagination;
@@ -13,8 +15,10 @@ class PostList extends Component
     public $search;
     public function render()
     {
-        $posts = Post::latest()->simplePaginate(3);
-        return view('livewire.post-list',[
+
+        $posts = Post::where('title', 'like', '%'. $this->search .'%')
+        ->latest()->simplePaginate(3);
+        return view('livewire.post-list', [
             'posts' => $posts
         ]);
     }
